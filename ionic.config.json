@@ -1,0 +1,8 @@
+{
+  "name": "cdis-hospital-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "273c2e17"
+}
