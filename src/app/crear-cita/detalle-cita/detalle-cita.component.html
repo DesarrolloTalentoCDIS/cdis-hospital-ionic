@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="cancel()">Atras</ion-button>
+    </ion-buttons>
+    <ion-title>Detalla tu cita</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="confirm()" [strong]="true">Continuar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+
+    <ion-textarea [(ngModel)]="detalle" label="Detalle" labelPlacement="floating" fill="outline"
+      placeholder="Escribe tus dudas a resolver"></ion-textarea>
+
+    <ion-input [(ngModel)]="telefono" class="desc-input" type="text" label="Telefono" label-placement="floating" fill="solid"
+      placeholder="81-8888-2222"></ion-input>
+
+    <ion-label position="stacked">Agregar imagen</ion-label>
+    <ion-button (click)="takePicture()" size="small">Tomar Foto <br><ion-icon
+        name="camera-outline"></ion-icon></ion-button>
+
+    <!--ion-button (click)="selectFile()" size="small">Seleccionar archivo <br><ion-icon name="document-outline"></ion-icon></ion-button-->
+
+
+    <br>
+  </ion-item>
+
+</ion-content>
