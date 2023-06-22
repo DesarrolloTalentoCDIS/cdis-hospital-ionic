@@ -8,6 +8,10 @@ const routes: Routes = [
   },  {
     path: 'crear-cita',
     loadChildren: () => import('./crear-cita/crear-cita.module').then( m => m.CrearCitaPageModule)
+  },
+  {
+    path: 'noticias',
+    loadChildren: () => import('./noticias/noticias.module').then( m => m.NoticiasPageModule)
   }
 
 ];
