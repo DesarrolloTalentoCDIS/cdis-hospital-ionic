@@ -24,6 +24,12 @@ const routes: Routes = [
         loadChildren: () => import('../crear-cita/crear-cita.module').then(m => m.CrearCitaPageModule)
       },
       {
+        
+          path:'noticias',
+          loadChildren: ()=> import('../noticias/noticias.module').then(m=>m.NoticiasPageModule)
+        
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
@@ -32,7 +38,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/noticias',
     pathMatch: 'full'
   }
 ];
