@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Fecha de la cita
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-datetime #datetime
+    locale="es-MX" 
+    hourCycle="h12"
+    [firstDayOfWeek]="1"
+    [value] = "dateValue"
+    [min] = "dateValue"
+    minuteValues="0,15,30,45"
+    size = "cover"  
+    (ionChange)="onDateTimeChange(datetime.value)">
+      <span slot="time-label">Hora</span>
+      <ion-buttons slot="buttons">
+        <ion-button color="danger" (click)="datetime.reset()">Reiniciar</ion-button>
+        <ion-button color="primary" (click)="datetime.cancel()">Atrás</ion-button>
+        <ion-button color="primary" (click)="datetime.confirm()">Guardar</ion-button>
+      </ion-buttons>
+    </ion-datetime>
+  </ion-item>
+  
+
+</ion-content>
